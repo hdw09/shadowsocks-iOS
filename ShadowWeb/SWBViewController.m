@@ -310,8 +310,15 @@
             [self showSettings];
             break;
         case 5:
-            [self presentModalViewController:qrCodeViewController animated:YES];
+            //[self presentModalViewController:qrCodeViewController animated:YES];
+        {
+            [self presentViewController:qrCodeViewController animated:YES completion:^{
+           
+                [qrCodeViewController startScan];
+                
+            } ];
             break;
+        }
         case 6:
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/shadowsocks/shadowsocks-iOS/wiki/Help"]];
             break;

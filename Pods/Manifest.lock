@@ -1,10 +1,16 @@
 PODS:
   - libsodium (1.0.3)
+  - Masonry (1.0.1)
+  - Toast (3.0)
 
 DEPENDENCIES:
   - libsodium (~> 1.0.3)
+  - Masonry
+  - Toast (~> 3.0)
 
 SPEC CHECKSUMS:
   libsodium: be547e31dc75725629acc5717dc0a40fc05ef243
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  Toast: 32c59229abfcf41850162b83bb9259dc84372473
 
 COCOAPODS: 0.39.0

@@ -4,12 +4,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ZXingObjC/ZXingObjC.h>
+//#import <ZXingObjC/ZXingObjC.h>
 
 typedef void (^QRCodeViewControllerReturnBlock)(NSString *code);
 
-@interface QRCodeViewController : UIViewController<ZXCaptureDelegate>
+@interface QRCodeViewController : UIViewController
 
 -(id)initWithReturnBlock:(QRCodeViewControllerReturnBlock)block;
+- (void)startScan;
+
+@end
+
+@interface ScanImageView:UIImageView
 
 @end
