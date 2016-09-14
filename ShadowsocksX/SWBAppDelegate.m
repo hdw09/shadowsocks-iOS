@@ -35,6 +35,7 @@
     FSEventStreamRef fsEventStream;
     NSString *configPath;
     NSString *PACPath;
+    NSString *userRulePath;
     AFHTTPRequestOperationManager *manager;
 }
 
@@ -96,8 +97,12 @@ static SWBAppDelegate *appDelegate;
     [menu addItem:[NSMenuItem separatorItem]];
     [menu addItemWithTitle:_L(Edit PAC for Auto Proxy Mode...) action:@selector(editPAC) keyEquivalent:@""];
     [menu addItemWithTitle:_L(Update PAC from GFWList) action:@selector(updatePACFromGFWList) keyEquivalent:@""];
-    qrCodeMenuItem = [[NSMenuItem alloc] initWithTitle:_L(Show QR Code...) action:@selector(showQRCode) keyEquivalent:@""];
+    [menu addItemWithTitle:_L(Edit User Rule for GFWList...) action:@selector(editUserRule) keyEquivalent:@""];
+    [menu addItem:[NSMenuItem separatorItem]];
+    qrCodeMenuItem = [[NSMenuItem alloc] initWithTitle:_L(Generate QR Code...) action:@selector(showQRCode) keyEquivalent:@""];
     [menu addItem:qrCodeMenuItem];
+    [menu addItem:[[NSMenuItem alloc] initWithTitle:_L(Scan QR Code from Screen...) action:@selector(scanQRCode) keyEquivalent:@""]];
+    [menu addItem:[NSMenuItem separatorItem]];
     [menu addItemWithTitle:_L(Show Logs...) action:@selector(showLogs) keyEquivalent:@""];
     [menu addItemWithTitle:_L(Help) action:@selector(showHelp) keyEquivalent:@""];
     [menu addItem:[NSMenuItem separatorItem]];
@@ -111,6 +116,7 @@ static SWBAppDelegate *appDelegate;
 
     configPath = [NSString stringWithFormat:@"%@/%@", NSHomeDirectory(), @".ShadowsocksX"];
     PACPath = [NSString stringWithFormat:@"%@/%@", configPath, @"gfwlist.js"];
+    userRulePath = [NSString stringWithFormat:@"%@/%@", configPath, @"user-rule.txt"];
     [self monitorPAC:configPath];
     appDelegate = self;
 }
@@ -260,6 +266,20 @@ void onPACChange(
     
     NSArray *fileURLs = @[[NSURL fileURLWithPath:PACPath]];
     [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs:fileURLs];
+}
+
+
+- (void)editUserRule {
+  
+  if (![[NSFileManager defaultManager] fileExistsAtPath:userRulePath]) {
+    NSError *error = nil;
+    [[NSFileManager defaultManager] createDirectoryAtPath:configPath withIntermediateDirectories:NO attributes:nil error:&error];
+    // TODO check error
+    [@"! Put user rules line by line in this file.\n! See https://adblockplus.org/en/filter-cheatsheet\n" writeToFile:userRulePath atomically:YES encoding:NSUTF8StringEncoding error:&error];
+  }
+  
+  NSArray *fileURLs = @[[NSURL fileURLWithPath:userRulePath]];
+  [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs:fileURLs];
 }
 
 - (void)showQRCode {
@@ -452,6 +472,13 @@ void onPACChange(
         // Objective-C is bullshit
         NSString *str2 = [[NSString alloc] initWithData:data2 encoding:NSUTF8StringEncoding];
         NSArray *lines = [str2 componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        
+        NSString *str3 = [[NSString alloc] initWithContentsOfFile:userRulePath encoding:NSUTF8StringEncoding error:nil];
+        if (str3) {
+            NSArray *rules = [str3 componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+            lines = [lines arrayByAddingObjectsFromArray:rules];
+        }
+        
         NSMutableArray *filtered = [[NSMutableArray alloc] init];
         for (NSString *line in lines) {
             if ([line length] > 0) {
