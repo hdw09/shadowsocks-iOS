@@ -1,0 +1,285 @@
+-- MySQL dump 10.13  Distrib 5.5.47, for debian-linux-gnu (i686)
+--
+-- Host: localhost    Database: shadowsocks
+-- ------------------------------------------------------
+-- Server version	5.5.47-0ubuntu0.14.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `invite_code`
+--
+
+DROP TABLE IF EXISTS `invite_code`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `invite_code` (
+  `id` int(32) NOT NULL AUTO_INCREMENT,
+  `code` varchar(128) NOT NULL,
+  `user` int(32) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3785 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `invite_code`
+--
+
+LOCK TABLES `invite_code` WRITE;
+/*!40000 ALTER TABLE `invite_code` DISABLE KEYS */;
+INSERT INTO `invite_code` VALUES (3639,'193c77e35a4a3f',1),(3661,'10zZlMDkzZjdiODA0ZmEwMTUwY',10),(3662,'12iNDMyN2JkZDRlYmJlYmNiMmJ',12),(3667,'7GNkNTA3MmJiMTg2NGNkZWU0Z',7),(3668,'7ODE1Mjg2YmExMDA3YWJmYmI4',7),(3669,'7YjMzZmRlYTNhZGM4MGViZDY0',7),(3670,'7VlNGNkNTkyMGFhNmM3Yzk5Nm',7),(3671,'7UzZDM4YTg4ODJlY2FkODYzM2',7),(3672,'7M1MzhmZTZlZjMzMGMxM2EwNW',7),(3673,'72OTU0YjRmNjM0N2U4OTdmOTU',7),(3674,'7NThlMzVkOWFkNDViZjdmM2Fl',7),(3675,'7jZiNjE4MjBkYWE1NjExYzg3M',7),(3676,'7TIwNWVlMmE1ZGU0NzFhNzBjM',7),(3677,'7TEzNDFlYzFmYTllMGMyNTlkZ',7),(3678,'70Yzk0YmFhZjM2OGUxODQwYTE',7),(3679,'72YzNhYmNhNjlmYTA5N2I4NTg',7),(3680,'7mNhOWJjMTkyMWMyNWM1MTIxZ',7),(3681,'7NjUwNjYwYjI1Mzc2MWFmMTg5',7),(3682,'7YTRkNDUyMDM1MzAwZjE4Yjk4',7),(3683,'7FhYTg4YjQ4MTM3YTE2YTFhY2',7),(3684,'7NzYyOTBmYTYwZWIzMWI1ZmM5',7),(3685,'7zNjYzODgxNzc3MmU0MmI1OWQ',7),(3686,'7iYjZmNmY4YmIyZTE2ZDAzYjg',7),(3687,'72NjllNmZlMjk4ZTYwN2ZlN2N',7),(3688,'7g2NTc1MjYzN2RhYTU0MGVhOW',7),(3689,'7cwNWFlNmQ3NDNiZjFlODQ4Yz',7),(3690,'7NWUwN2I0ZDVkZTlkMThjMzUw',7),(3691,'72JiNmEzYjg4NGY0Zjg4YjNhO',7),(3692,'7jUyN2YyYjVkM2U5NWQ0YTczM',7),(3693,'7MzAyMDFmNzNmMTQyNDQ5ZDAz',7),(3694,'7yZmQzMTBkY2FhODc4MWE5YTY',7),(3695,'7ZmNWMxZjFkZWQ0NmMyNWQyOD',7),(3696,'74ZjhkYzA0Y2JmMTYyNDBkYWE',7),(3697,'7MTUyYmE5MzM2YTY3MGUzNmQw',7),(3698,'70NjM0OGE4NTYzMjE3MjlhMmY',7),(3699,'7MzIzNTA2Mjk2M2NjZGU3MTdi',7),(3700,'7EzOGE0YTkzMTZjNDllNWE4Mz',7),(3701,'7NjA5NmQ0MjgxYjdjOTVjZDdl',7),(3702,'7mRjZTJmM2EwZjlkYWRhMGMyY',7),(3703,'7Y4YmQxZDNkM2ViYWFiYjA0ZD',7),(3704,'7mODAzM2NmOTQzN2MyMTNlZTE',7),(3705,'7TFlZjE4NmUxOGRjMDBjMmQzM',7),(3706,'7lNmExM2NmNWVhYTQ5NmQ1MWZ',7),(3707,'7WJmZjAxM2FjZWRmYjFkMTQwN',7),(3708,'7E0NjBmN2M5MmQyMTI0YTY3ZW',7),(3709,'7yY2VlOTQ2ZGI4M2U3YTUyY2U',7),(3710,'7NWMxZjFkZWQ0NmMyNWQyODEx',7),(3711,'7MzkxZGFhYmUzZGUxZDc2YTY3',7),(3712,'7WE1NjU1NGY5NjM2OWFiOTNlN',7),(3713,'7kNThhNTRlOTQzNzdlNmFlMmV',7),(3714,'7NTQ5NzI2ZDVjMWVhMzkwNjcy',7),(3715,'7zUxN2Q2OGI2ZWRkMzAxNWIzZ',7),(3716,'7zQ5ZDgwOGU0NjQ5NWE4ZGExZ',7),(3717,'7ZjA4MDZlYWUzMmQzMDk4M2I2',7),(3718,'7zVhZjYwMjM2NDZlZGUwZTFmN',7),(3719,'7I2N2RhZDAzMDVkMWE2MzA4ZD',7),(3720,'7MjUwNzkzNTQ5NzI2ZDVjMWVh',7),(3721,'7I2MmJjOGY0MmEwYjY2NzUxZm',7),(3722,'7DYyMDg0YzVmNGU3ZTg1YTA5M',7),(3723,'7YTcwNzEyYTI1MjEyM2M0MGQy',7),(3724,'7OTYyOWZjM2FlNWU5ZjY2MTFl',7),(3725,'7diMTZlY2Y4Y2E1MzcyMzU5Mz',7),(3726,'7NjExODgzZDI3NjBjOGJiYWZi',7),(3727,'7iOWVjMzBhZDlmNjhmODliMjk',7),(3728,'7jY2IzN2RmOTc3Y2I2ZDlkYTE',7),(3729,'7DdlNWJjNTI4MDIxNGUwNDg2Y',7),(3730,'72NWYyZjJmZGFmNmM2OTliMjI',7),(3731,'7NzdhZTRkMmJhMjE0MjVhNTlh',7),(3732,'7EwMGEyOTVjMGM2OTA5MzEyMj',7),(3733,'7FjOTE2MmI0N2M1NmZjOGE0ZD',7),(3734,'7GI2NWI5N2VlYWU2Nzg4YWEzM',7),(3735,'7YTNkYjM1NWVmMmIwZTY0YjQ3',7),(3736,'7TNmMzkwZDg4ZTRjNDFmMjc0N',7),(3737,'7BkYTIwZWYzOTliNjNhNzJkMG',7),(3738,'7WExOTg5OGU1MDU4OTM4MTY3Y',7),(3739,'7OTBjYTQ1YzAwYjEyNDliYmUz',7),(3740,'7zYzEwMmI3MWM1OTNkOThkOTY',7),(3741,'7xYWZiNzc2ZTMxNDNlOGExYTA',7),(3742,'7kZWQ1MzUzYzVlZTQ4ZDBiN2Q',7),(3743,'7kZWFlZWFlMTUzOGZiNmM0NTk',7),(3744,'7YxZTQyOGI2NTY4OGYxNGI4NG',7),(3745,'7zgwZTk1NTc0MjUwZGFiZTA3M',7),(3746,'7MGQ2ZTYzYWE4ZTQxYzg5Njg5',7),(3747,'7TNiMWNiNGI4YjM3ZDA5YWU0O',7),(3748,'7TJmM2M3ZTEyNDM1YTcyNGE4Z',7),(3749,'7DlkNGY0OTVlODc1YTJlMDc1Y',7),(3750,'75NTliMTkxZjhmOWRlM2Y5MjR',7),(3751,'7Mjc5ZTQ3MWY0ZDE4MGIwOGQ2',7),(3752,'7DM4YTg4ODJlY2FkODYzM2M4Z',7),(3753,'7yZTZmMTNiM2EyZGYxMzNmMDc',7),(3754,'7MDFkYWE4OGE1MWY2Y2E4Y2Zj',7),(3755,'7GQ4ODQzMTczMjk1N2E2MThkN',7),(3756,'7ExMGJiZDQ4MGU0YzU1NzNkOG',7),(3757,'7Yzk0YmFhZjM2OGUxODQwYTEz',7),(3758,'7MGQ2ODMwZDYyNzY1ZmZhZDc3',7),(3759,'7MTU0ZjMyNDBhZDViOWI0MTNh',7),(3760,'7jM5MjNmNDllNTI0MTM0M2FhN',7),(3766,'19FlNGRhYWUyNjViNzkwOTY1YT',19),(3767,'20DgxMDNhMzkxZGFhYmUzZGUxZ',20),(3773,'zblWUwZWIzZWVkMzlkMmJjZWY0N',1),(3774,'24c2Y2U4OTQ5ZmUyOWJmMmE1Mz',24),(3775,'26wNjYwYjI1Mzc2MWFmMTg5Njg',26),(3776,'23OGY5MThhNGFhMjliZTI5ZDJj',23),(3783,'41OTVlODc1YTJlMDc1YTFhNGE2',41),(3784,'453NGI1MGJhM2Y3Y2JhMWU2YzU',45);
+/*!40000 ALTER TABLE `invite_code` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ss_invite_code`
+--
+
+DROP TABLE IF EXISTS `ss_invite_code`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ss_invite_code` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `code` varchar(128) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ss_invite_code`
+--
+
+LOCK TABLES `ss_invite_code` WRITE;
+/*!40000 ALTER TABLE `ss_invite_code` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ss_invite_code` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ss_node`
+--
+
+DROP TABLE IF EXISTS `ss_node`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ss_node` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `node_name` varchar(128) NOT NULL,
+  `node_type` int(3) NOT NULL,
+  `node_server` varchar(128) NOT NULL,
+  `node_method` varchar(64) NOT NULL,
+  `node_info` varchar(128) NOT NULL,
+  `node_status` varchar(128) NOT NULL,
+  `node_order` int(3) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ss_node`
+--
+
+LOCK TABLES `ss_node` WRITE;
+/*!40000 ALTER TABLE `ss_node` DISABLE KEYS */;
+INSERT INTO `ss_node` VALUES (1,'美国',0,'23.83.239.138','aes-256-cfb','node描述','可用',0);
+/*!40000 ALTER TABLE `ss_node` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ss_password_reset`
+--
+
+DROP TABLE IF EXISTS `ss_password_reset`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ss_password_reset` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(32) NOT NULL,
+  `token` varchar(128) NOT NULL,
+  `init_time` int(11) NOT NULL,
+  `expire_time` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ss_password_reset`
+--
+
+LOCK TABLES `ss_password_reset` WRITE;
+/*!40000 ALTER TABLE `ss_password_reset` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ss_password_reset` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ss_reset_pwd`
+--
+
+DROP TABLE IF EXISTS `ss_reset_pwd`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ss_reset_pwd` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `init_time` int(11) NOT NULL,
+  `expire_time` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `uni_char` varchar(32) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ss_reset_pwd`
+--
+
+LOCK TABLES `ss_reset_pwd` WRITE;
+/*!40000 ALTER TABLE `ss_reset_pwd` DISABLE KEYS */;
+INSERT INTO `ss_reset_pwd` VALUES (0,1424448190,1424534590,1,'2MzU5ODFkYzM4MmVkZTM2ZTdjNGNhNDI');
+/*!40000 ALTER TABLE `ss_reset_pwd` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ss_user_admin`
+--
+
+DROP TABLE IF EXISTS `ss_user_admin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ss_user_admin` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uid` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ss_user_admin`
+--
+
+LOCK TABLES `ss_user_admin` WRITE;
+/*!40000 ALTER TABLE `ss_user_admin` DISABLE KEYS */;
+INSERT INTO `ss_user_admin` VALUES (1,1),(2,2),(3,6),(4,7),(5,18),(6,5);
+/*!40000 ALTER TABLE `ss_user_admin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(128) CHARACTER SET utf8mb4 NOT NULL,
+  `email` varchar(32) NOT NULL,
+  `pass` varchar(64) NOT NULL,
+  `passwd` varchar(16) NOT NULL,
+  `t` int(11) NOT NULL DEFAULT '0',
+  `u` bigint(20) NOT NULL,
+  `d` bigint(20) NOT NULL,
+  `plan` varchar(2) CHARACTER SET utf8mb4 NOT NULL,
+  `transfer_enable` bigint(20) NOT NULL,
+  `port` int(11) NOT NULL,
+  `switch` tinyint(4) NOT NULL DEFAULT '1',
+  `enable` tinyint(4) NOT NULL DEFAULT '1',
+  `type` tinyint(4) NOT NULL DEFAULT '1',
+  `last_get_gift_time` int(11) NOT NULL DEFAULT '0',
+  `last_check_in_time` int(11) NOT NULL DEFAULT '0',
+  `last_rest_pass_time` int(11) NOT NULL DEFAULT '0',
+  `reg_date` datetime NOT NULL,
+  `invite_num` int(8) NOT NULL,
+  `money` decimal(12,2) NOT NULL,
+  `ref_by` int(11) NOT NULL DEFAULT '0',
+  `donate_money` decimal(12,2) DEFAULT '0.00',
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (2,'hdw_happy','hhhdddwww@163.com','1b51139dafa769fe4e5ef3470362c325','O70RB9SY',1518490768,4788484179,214668758014,'A',2147483648000,10005,1,1,1,0,1467444597,0,'2016-02-03 05:51:00',0,0.00,0,5.00),(4,'渡若飞','pure1031@hotmail.com','5e1251e40e9cec5e1b66aaba4275b404','FcLZZQGY',1482037036,409938317,6395644930,'A',74390804890,10008,1,1,1,0,1476543136,0,'2016-03-03 05:56:27',0,0.00,0,0.00),(5,'溪水碧风','824992627@qq.com','c17e002e8df2c545e831b4d06babe863','Bestwishes',1518496816,963107469,49769423987,'A',214864756736,10013,1,1,1,0,1512448987,0,'2016-03-03 05:59:17',0,0.00,0,0.00),(6,'cjscyzbl','993435357@qq.com','4928a63b40832d67104ca6a4db62cec4','tpitAeqG',1517124940,152930494,2747875028,'A',116492599296,10018,1,1,1,0,1498633950,0,'2016-03-03 06:00:01',1,0.00,0,0.00),(7,'栋哥是我','zsd498537806@gmail.com','7683ec8c35bcf4ba3a5b6e3833f055b6','naCpoHLM',1518499757,3053232672,87993706396,'A',260147945930,10019,1,1,1,0,1517898031,0,'2016-03-03 06:00:41',0,0.00,0,0.00),(8,'bcsxiao','chuansong06@163.com','e10adc3949ba59abbe56e057f20f883e','b74rSZWg',1502377126,69178519,1445713261,'A',54253322240,10020,1,1,1,0,1464581538,0,'2016-03-03 06:24:44',1,0.00,0,0.00),(10,'bobyang','bob_yang@21cn.com','e0cca5a5e267fed21f8ad1585bdf6bae','Y884wMKb',1488272992,18635100,406023158,'A',5702156288,10025,1,1,1,0,1467342040,0,'2016-03-03 21:38:03',0,0.00,0,0.00),(11,'ymychina','ymychina@163.com','e0cca5a5e267fed21f8ad1585bdf6bae','fe6fw4tL',1460449156,59770,8251671,'A',6798023066,10030,1,1,1,0,1467180070,0,'2016-03-03 21:41:11',0,0.00,0,0.00),(12,'123987ab','123er@hotmail.com','e0cca5a5e267fed21f8ad1585bdf6bae','OgR1XLQy',1460515472,105759,8319396,'A',6288310272,10033,1,1,1,0,1468039031,0,'2016-03-03 21:43:27',0,0.00,0,0.00),(13,'乐之_','377463855@qq.com','bdd3696f18aa9d6f97ece7aec28aa01c','7aUGq9lH',1500476683,42556596,3837435583,'A',14240291226,10035,1,1,1,0,1481865161,0,'2016-03-03 22:01:15',0,0.00,2,0.00),(15,'小小凡','442853852@qq.com','44c473fc193068d71c548b8633db1479','OTvuQINq',1457080556,78473,2853437,'A',8744075264,10042,1,1,1,0,1457080002,0,'2016-03-04 03:26:20',1,0.00,2,0.00),(16,'bygreencn','bygreen@163.com','5e90db17dcf7f7ab78002ba470886017','I4UfNEyK',1517931885,18279519,450490031,'A',51866763264,10044,1,1,1,0,1483873950,0,'2016-03-04 05:05:22',1,0.00,0,0.00),(17,'丁成成66','623423779@qq.com','25d55ad283aa400af464c76d713c07ad','NXidk10J',1518495990,1617262276,179534058671,'A',536870912000,10046,1,1,1,0,0,0,'2016-03-05 08:37:44',1,0.00,2,0.00),(18,'my lord','1102366897@qq.com','25f9e794323b453885f5181f1b624d0b','DvEtkMmy',1490968386,1019125246,25122739927,'A',1074087854080,10048,1,1,1,0,1464006941,0,'2016-03-06 05:23:25',1,0.00,5,0.00),(20,'okuserto','okuserto@sohu.com','e0cca5a5e267fed21f8ad1585bdf6bae','jvUybAE9',1471498087,3474984,141080380,'A',5765909709,10054,1,1,1,0,1470102253,0,'2016-03-23 23:30:07',0,0.00,11,0.00),(21,'ahu_bxd','809824992@qq.com','4d997d23ee13563c59528b3565e97c56','DvZOAxY7',1518404394,397545253,4555032369,'A',54449510810,10057,1,1,1,0,1508573910,0,'2016-04-28 07:33:34',0,0.00,7,0.00),(22,'sircheng','mr.chenghaihui@gmail.com','0362cb95167c311db57a8baf9e262836','WQ0pEibn',1474255558,18794370,456361554,'A',3381657600,10062,1,1,1,0,1474416294,0,'2016-05-26 00:55:53',1,0.00,0,0.00),(23,'lj98lj98','lj98lj98@163.com','08a0acd6f795d74e0180decaa1235a3f','o1AUjFkE',1472635250,1767286,27381509,'A',4842323968,10067,1,1,1,0,1482758768,0,'2016-05-26 01:31:02',0,0.00,0,0.00),(24,'toiletx','niiksbol@gmail.com','2226277602039ebc17f5fc89d636f82c','JVzUUBFm',1494293880,310867953,3360087254,'A',10595860480,10072,1,1,1,0,1481165694,0,'2016-05-26 03:16:39',0,0.00,0,0.00),(25,'wordasss','aevilr@sina.com','30e0e8830290cfa9aaad537d96220f1d','cr3IrN8d',1517752831,55948754,795745841,'A',11117002752,10076,1,1,1,0,1483540447,0,'2016-05-26 03:20:23',1,0.00,0,0.00),(26,'sos小慧','liaofan30@gmail.com','ecd35c92b252f07e6f8a285139ad7780','ssshadow',1486382996,14203769,3232636650,'A',23249027072,10077,1,1,1,0,1482298827,0,'2016-05-26 06:31:45',0,0.00,0,0.00),(27,'忠魂斋主人','zhanglei_edu@foxmail.com','028dae045b010a35f1de90fc2cb0526e','Ps58ySqA',1466307790,20228338,631087738,'A',86096478208,10078,1,1,1,0,1465958709,0,'2016-06-14 22:44:45',1,0.00,2,0.00),(28,'houhuyj','houhuyj@sina.com','9a46e31d9602aa9bc8bdd5508add6537','AWMBdrh5',1508115262,22807868,3598276276,'A',11641290752,10079,1,1,1,0,1483880215,0,'2016-08-20 23:44:55',1,0.00,0,0.00),(29,'vicki123','taxing1206@126.com','20af2480cbeaf06cac68b412f5edf94a','XfwkqtjY',1473326573,2886381,20017162,'A',6019874816,10080,1,1,1,0,1475215926,0,'2016-08-27 18:45:16',1,0.00,0,0.00),(30,'ssmq5201314','ssmq5201314@126.com','0005e836cc0b7b588a119e65dab00b58','h1MuQjlG',1517793496,5326252,371923589,'A',7098859520,10081,1,1,1,0,1483696028,0,'2016-08-31 05:13:31',1,0.00,0,0.00),(31,'zhongshaofen','zhongshaofen2012@gmail.com','f4698bed5aabf6eda72fde9070961e0a','VMKs6RH6',1489565498,49496423,3436365057,'A',53687091200,10082,1,1,1,0,0,0,'2016-09-02 00:58:58',1,0.00,0,0.00),(32,'llllllllll','370257867@qq.com','24ca62c8ba6a66818aa814e66aaf2fad','0cOJIyeG',1518190275,9960773,504899954,'A',53478214861,10083,1,1,1,0,1473608477,0,'2016-09-05 10:48:15',1,0.00,4,0.00),(33,'俊采星驰','1204264876@qq.com','63e57d428759a51d98c52ddb1f82bac8','Z42KSWQz',1517032367,2211107617,50483299010,'A',214748364800,10084,1,1,1,0,1474807063,0,'2016-09-25 08:15:49',1,0.00,0,0.00),(34,'old_wan','hf_wgh@163.com','232c65393dae63c934e2a9e92281a7d3','aYbBfH8n',0,0,0,'A',1415577600,10085,1,1,1,0,1475514549,0,'2016-10-03 13:07:38',1,0.00,0,0.00),(35,'赵燕清','qing521yan@126.com','061dcdec250b6c8280194d310e11bb96','UmCe4A6J',1495417716,61825162,2809740030,'A',10405019648,10087,1,1,1,0,1483578631,0,'2016-10-13 06:11:39',1,0.00,0,0.00),(36,'songking','songking_2008@126.com','39717d70475f805bc5e3f605d6251e7e','FyR1oOAR',1499003420,5122681,130987499,'A',10623962317,10089,1,1,1,0,1482314042,0,'2016-12-19 21:51:50',1,0.00,13,0.00),(37,'幸福小饽','1005057082@qq.com','64583067a77191368532f4279182e7e6','Hr998vU1',1517584124,44285262,1610545260,'A',21474836480,10093,1,1,1,0,1492846030,0,'2017-04-22 03:26:22',1,0.00,0,0.00),(39,'小菜C','nwenchao@foxmail.com','e4998d9b102cbfec1188894163593fa1','7MV9TCXH',0,0,0,'A',1837105152,10097,1,1,1,0,1496326918,0,'2017-06-01 10:20:21',1,0.00,0,0.00),(40,'zero516cn','wanghao@looky.cc','b8cc0a47e19f9c3da97ec2284ac10b57','ArigCmM0',1517402157,32357080,1567588876,'A',129158348800,10102,1,1,1,0,1499388586,0,'2017-07-06 20:45:01',1,0.00,7,0.00),(41,'tanymwlm@outlook.com','tanymwlm@outlook.com','837f42f1f766103b598282571ea6286d','GgPD6I52',1518403824,548184275,2484831867,'A',39979896013,10106,1,1,1,0,1508760713,0,'2017-08-03 07:29:47',0,0.00,21,0.00),(42,'samegood','vth6@163.com','7ae2ea8bb3d93884e1a9803698172a5a','PK9jQ9S4',1518492659,260220163,3486006179,'A',160206159872,10110,1,1,1,0,1517967631,0,'2017-10-09 01:11:13',0,0.00,7,0.00),(43,'Chapple','chenpengxu@hotmail.com','f09809bbf6211eaa1cee5aab55c5bb7e','yikQ9pIU',1518500372,382981132,2344452803,'A',128403688653,10112,1,1,1,0,1517967603,0,'2017-10-09 04:52:54',0,0.00,42,0.00),(44,'singchia','singchia@163.com','d792af448d3e79197068892c9e52c118','1PdepaaV',1518398317,376598522,6765342801,'A',156996573594,10115,1,1,1,0,1511353935,0,'2017-10-31 23:48:00',1,0.00,7,0.00),(45,'fish_oO','799074873@qq.com','cda93bb27582177c2d898a9706794f4a','VrTang2T',1512864941,9784,544954,'A',92222678630,10119,1,1,1,0,1512715052,0,'2017-12-08 01:36:45',0,0.00,43,0.00),(46,'SHENYI_2018','shenyi801@sina.com','6a2ece01f0d4d3312bc62c59fb897236','jZE4qjAu',1518499697,6621036,91407330,'A',171888827433,10121,1,1,1,0,0,0,'2017-12-21 20:07:18',1,0.00,7,0.00),(47,'乌拉拉','xly_shu1@163.com','fb6ff6975a8edfbb9699e07a1f898c45','zSBaEd9H',0,0,0,'A',189336918163,10125,1,1,1,0,1517900537,0,'2018-02-06 02:01:30',1,0.00,7,0.00);
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user_token`
+--
+
+DROP TABLE IF EXISTS `user_token`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_token` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `token` varchar(256) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `create_time` int(11) NOT NULL,
+  `expire_time` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_token`
+--
+
+LOCK TABLES `user_token` WRITE;
+/*!40000 ALTER TABLE `user_token` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user_token` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user_traffic_log`
+--
+
+DROP TABLE IF EXISTS `user_traffic_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_traffic_log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `u` int(11) NOT NULL,
+  `d` int(11) NOT NULL,
+  `node_id` int(11) NOT NULL,
+  `rate` float NOT NULL,
+  `traffic` varchar(32) NOT NULL,
+  `log_time` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_traffic_log`
+--
+
+LOCK TABLES `user_traffic_log` WRITE;
+/*!40000 ALTER TABLE `user_traffic_log` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user_traffic_log` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-02-13  0:39:36
