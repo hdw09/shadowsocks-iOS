@@ -54,14 +54,10 @@ include_once 'header.php';
             <div class="col s12 m4">
                 <div class="icon-block">
                     <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-                    <h5 class="center">捐赠我们</h5>
+                    <h5 class="center">获取邀请码</h5>
 
                     <p class="light"  style='font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;font-size: 16px;'>
-                        如果您喜欢我们的网站，可以捐助我们，得到的捐款我们会用在vpn服务器的续费维护上。您可以扫描下面二维码用支付宝转账给我们。5-10元我们认为是十分理智和善的捐赠金额。
-                       转账时可以备注 <font color='red'>“ssshadow-我爱科研”</font>，我们会扩大您每月的流量作为感谢。
-                    </p>
-                    <p style="text-align: center;">
-                    <img src='./images/xbchzh.png' />
+                        由于主机流量问题，目前不再定期发放邀请码， 可以通过之前老用户找到管理员索要<font color='red'>“邀请码”</font>
                     </p>
                 </div>
             </div>
