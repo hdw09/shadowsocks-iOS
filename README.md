@@ -11,7 +11,7 @@ iOS
 
 * 原先的下载地址（https://github.com/shadowsocks/shadowsocks-iOS）被作者移除没有更新，下载编译后由于端口等问题无法使用。
 * [binss](https://github.com/binss) 同学在它等分支上修改了端口问题，并用pod加载libsodium使得程序更容易编译。但由于扫码使用的是第三方库，这个库不知道什么原因在我上面一直编译不通过。
-* 所以我利用系统的video库重新写了扫码加载的功能，并使其能在xcode10上编译，并且指出iOS7。
+* 所以我利用系统的video库重新写了扫码加载的功能，并使其能在xcode10上编译，并且指出iOS7。哈哈哈
 
 ---
 
